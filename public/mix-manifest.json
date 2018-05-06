@@ -1,0 +1,21 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/sb-admin.css": "/css/sb-admin.css",
+    "/vendor/bootstrap/css/bootstrap.min.css": "/vendor/bootstrap/css/bootstrap.min.css",
+    "/vendor/font-awesome/css/font-awesome.css": "/vendor/font-awesome/css/font-awesome.css",
+    "/vendor/datatables/dataTables.bootstrap4.css": "/vendor/datatables/dataTables.bootstrap4.css",
+    "/vendor/bootstrap/js/bootstrap.js": "/vendor/bootstrap/js/bootstrap.js",
+    "/vendor/datatables/dataTables.bootstrap4.js": "/vendor/datatables/dataTables.bootstrap4.js",
+    "/vendor/bootstrap/js/bootstrap.bundle.min.js": "/vendor/bootstrap/js/bootstrap.bundle.min.js",
+    "/vendor/jquery/jquery.slim.js": "/vendor/jquery/jquery.slim.js",
+    "/vendor/jquery/jquery.js": "/vendor/jquery/jquery.js",
+    "/vendor/jquery-easing/jquery.easing.min.js": "/vendor/jquery-easing/jquery.easing.min.js",
+    "/vendor/datatables/jquery.dataTables.js": "/vendor/datatables/jquery.dataTables.js",
+    "/vendor/jquery-easing/jquery.easing.compatibility.js": "/vendor/jquery-easing/jquery.easing.compatibility.js",
+    "/vendor/chart_js/Chart.min.js": "/vendor/chart_js/Chart.min.js",
+    "/vendor/chart_js/Chart.bundle.min.js": "/vendor/chart_js/Chart.bundle.min.js",
+    "/js/sb-admin.min.js": "/js/sb-admin.min.js",
+    "/js/sb-admin-datatables.min.js": "/js/sb-admin-datatables.min.js",
+    "/js/sb-admin-charts.min.js": "/js/sb-admin-charts.min.js"
+}
