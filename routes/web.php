@@ -13,16 +13,38 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+/**
+ * Access all users
+ */
 Route::get('/', ['uses' => 'Home\IndexController@index'])->name('index');
-
-Route::get('/charts', ['uses' => 'Home\ChartController@charts'])->name('charts');
-
-Route::get('/tables', ['uses' => 'Home\TableController@tables'])->name('tables');
-
-Route::get('/navbar', ['uses' => 'Home\ComponentController@navbar'])->name('navbar');
-
-Route::get('/cards', ['uses' => 'Home\ComponentController@cards'])->name('cards');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
+/**
+ * Access if have permission:tables_access
+ */
+Route::get('/tables', ['uses' => 'Home\TableController@tables', 'middleware' => 'permission:tables_access'])->name('tables');
+
+
+/**
+ * Access auth users
+ */
+Route::group(['middleware' => ['auth']], function () {
+
+    Route::get('/navbar', ['uses' => 'Home\ComponentController@navbar'])->name('navbar');
+
+    Route::get('/cards', ['uses' => 'Home\ComponentController@cards'])->name('cards');
+
+});
+
+/**
+ * Access if have permission:dasb_char_comp_access
+ */
+Route::group(['middleware' => 'permission:dasb_char_comp_access'], function () {
+
+    Route::get('/dashboard', ['uses' => 'Home\DashboardController@dashboard'])->name('dashboard');
+
+    Route::get('/charts', ['uses' => 'Home\ChartController@charts'])->name('charts');
+
+});

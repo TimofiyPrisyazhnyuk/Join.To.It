@@ -8,13 +8,12 @@ use App\Http\Controllers\Controller;
 class IndexController extends Controller
 {
 
-
-
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
-        return view('index');
+        return view('welcome');
     }
-
-
 
 }
