@@ -27,6 +27,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
             @permission('dasb_char_comp_access')
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
                 <a class="nav-link" href="{{ route('dashboard') }}">
@@ -41,6 +42,13 @@
                 </a>
             </li>
             @endpermission
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Map">
+                <a class="nav-link" href="{{ route('map') }}">
+                    <i class="fa fa-fw fa-map"></i>
+                    <span class="nav-link-text">Map</span>
+                </a>
+            </li>
+
             @permission('tables_access')
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
                 <a class="nav-link" href="{{ route('tables') }}">
@@ -49,6 +57,8 @@
                 </a>
             </li>
             @endpermission
+
+            @auth
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents"
                    data-parent="#exampleAccordion">
@@ -64,6 +74,8 @@
                     </li>
                 </ul>
             </li>
+            @endauth
+
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages"
                    data-parent="#exampleAccordion">

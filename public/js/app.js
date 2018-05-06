@@ -47356,12 +47356,12 @@ var staticRenderFns = [
     return _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row justify-content-center" }, [
         _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card card-default" }, [
-            _c("div", { staticClass: "card-header" }, [
+          _c("div", { staticClass: "map map-default" }, [
+            _c("div", { staticClass: "map-header" }, [
               _vm._v("Example Component")
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
+            _c("div", { staticClass: "map-body" }, [
               _vm._v(
                 "\n                    I'm an example component.\n                "
               )

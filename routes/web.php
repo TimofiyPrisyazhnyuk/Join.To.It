@@ -22,10 +22,15 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 /**
+ * Google Map show
+ */
+Route::get('/map', ['uses' => 'Map\MapController@showMap'])->name('map');
+
+/**
  * Access if have permission:tables_access
  */
-Route::get('/tables', ['uses' => 'Home\TableController@tables', 'middleware' => 'permission:tables_access'])->name('tables');
-
+Route::get('/tables', ['uses' => 'Home\TableController@tables', 'middleware' => 'permission:tables_access'])
+    ->name('tables');
 
 /**
  * Access auth users
@@ -41,10 +46,11 @@ Route::group(['middleware' => ['auth']], function () {
 /**
  * Access if have permission:dasb_char_comp_access
  */
-Route::group(['middleware' => 'permission:dasb_char_comp_access'], function () {
+Route::group(['middleware' => ['permission:dasb_char_comp_access', 'web']], function () {
 
     Route::get('/dashboard', ['uses' => 'Home\DashboardController@dashboard'])->name('dashboard');
 
     Route::get('/charts', ['uses' => 'Home\ChartController@charts'])->name('charts');
 
+    Route::post('/map', ['uses' => 'Map\MapController@createMarkers'])->name('create_markers');
 });

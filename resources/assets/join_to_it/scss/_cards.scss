@@ -1,5 +1,5 @@
 // Styling for custom cards
-// Custom class for the background icon in card blocks
+// Custom class for the background icon in map blocks
 .card-body-icon {
   position: absolute;
   z-index: 0;
@@ -10,7 +10,7 @@
   @include rotate;
 }
 
-// Override breakpoints for card columns to work well with sidebar
+// Override breakpoints for map columns to work well with sidebar
 .card-columns {
   @media (min-width: 576px) {
     column-count: 1;
